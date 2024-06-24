@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AMAZON SHIPPING CALCULATOR</title>
+</head>
+
+<body>
+  <p>Amazon shipping calculator</p>
+  <input class="js-cost-input" type="text" placeholder="Cost of order">
+  <button onclick="calculateTotal()">calculate</button>
+  <p class="js-total-cost"></p>
+
+  <script>
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-cost-input');
+      let cost = parseFloat(inputElement.value);
+      //let cost = inputElement.value * 1; // Implicitly convert input to a number
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector('.js-total-cost').innerHTML = `$ ${cost}`; //cost.toFixed(2) can be used for 2 decimal place
+    }
+
+  </script>
+</body>
+
+</html>
