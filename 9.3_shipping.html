@@ -17,6 +17,11 @@
   <p class="js-total-cost"></p>
 
   <script>
+
+    String(25)
+    console.log('25'-5);// automatic type  TYPE COERCION
+    console.log('25'+ 5); // both works as string in adding so we use Number
+
     function handleCostkeydown(event) {
       if (event.key === 'Enter') {// event object is not exixt in the function so used parameter put in function
         calculateTotal();
