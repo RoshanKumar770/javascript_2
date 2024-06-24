@@ -14,7 +14,10 @@
   <script>
     function calculateTotal() {
       const inputElement = document.querySelector('.js-cost-input');
-      let cost = parseFloat(inputElement.value);
+      // TYPE COERCION - error
+      let cost =inputElement.value;
+      console.log(cost);
+      // let cost = parseFloat(inputElement.value);
       //let cost = inputElement.value * 1; // Implicitly convert input to a number
       if (cost < 40) {
         cost = cost + 10;
