@@ -85,20 +85,6 @@
       document.querySelector('.js-score').innerHTML =
         `wins:${score.wins} , ties:${score.ties} , losses:${score.losses}`;
     }
-
-    function pickComputermove() {
-      const rand_no = Math.random();
-      let ComputerMove = '';
-
-      if (rand_no >= 0 && rand_no < 1 / 3) {
-        ComputerMove = 'rock';
-      } else if (rand_no >= 1 / 3 && rand_no < 2 / 3) {
-        ComputerMove = 'paper';
-      } else if (rand_no >= 2 / 3 && rand_no < 1) {
-        ComputerMove = 'scissors';
-      }
-      return ComputerMove;
-    }
   </script>
 </body>
 
