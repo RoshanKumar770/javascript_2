@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Practice DOM</title>
-    <body>
-      
-      <script>
-      console.log(document.body.innerHTML=('<button>9a</button>'));
-      </script>
-    </body>
-  </head>
+
+<head>
+  <title>Practice DOM</title>
+
+<body>
+  <button class="js-button" onclick="
+      changing();
+      ">9a</button>
+  <script>
+    function changing(){
+      const buttonElement=document.querySelector('.js-button');
+      if(buttonElement.innerHTML === '9a'){
+        buttonElement.innerHTML='9b';
+      }
+      else{
+        buttonElement.innerHTML = '9a';
+      }
+    } 
+    //console.log(document.body.innerHTML=('<button>9a</button>'));
+
+  </script>
+</body>
+</head>
+
 </html>
