@@ -13,7 +13,6 @@
     console.log(document.title);
     document.title = ('Practicing DOM');
     function changing(){
-      console.log(document.title);
       const buttonElement=document.querySelector('.js-button');
       if(buttonElement.innerHTML === '9a'){
         buttonElement.innerHTML='9b';
@@ -21,7 +20,7 @@
       else{
         buttonElement.innerHTML = '9a';
       }
-      
+      console.log(document.title);
     } 
     //console.log(document.body.innerHTML=('<button>9a</button>'));
 
