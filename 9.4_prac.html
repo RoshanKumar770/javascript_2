@@ -3,29 +3,37 @@
 
 <head>
   <title>Practice DOM</title>
+</head>
 
 <body>
   <button class="js-button" onclick="
       changing();
       ">9a</button>
-
+  <p  class="js-para"> Original</p>
   <script>
     console.log(document.title);
-    document.title = ('Practicing DOM');
-    function changing(){
-      const buttonElement=document.querySelector('.js-button');
-      if(buttonElement.innerHTML === '9a'){
-        buttonElement.innerHTML='9b';
+
+    function changing() {
+      const buttonElement = document.querySelector('.js-button');
+      const paraElem = document.querySelector('.js-para');
+      if (buttonElement.innerHTML === '9a') {
+        buttonElement.innerHTML = '9b';
       }
-      else{
+      else {
         buttonElement.innerHTML = '9a';
       }
+      if (paraElem.innerHTML === 'Changed!') {
+        paraElem.innerHTML = 'Unhanged!';
+      }
+      else {
+        paraElem.innerHTML = 'Changed!';
+      }
       console.log(document.title);
-    } 
+      document.title = ('Practicing DOM');
+    }
     //console.log(document.body.innerHTML=('<button>9a</button>'));
 
   </script>
 </body>
-</head>
 
 </html>
