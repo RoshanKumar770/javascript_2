@@ -83,14 +83,14 @@
       const costInput = document.querySelector('.js-cost-input');
       let cost = Number(costInput.value);                // this is how we get value inside text-box
       // whenever we get value manually we need to convert to numbers
-      if (cost <=40) {
+      if (cost <= 40) {
         cost += 10;
       }
 
       document.querySelector('.js-total-cost')
         .innerHTML = `Total cost calculated $${cost}`;
     }
-
+    
   </script>
 </body>
 
