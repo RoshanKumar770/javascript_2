@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Practice DOM // for enter key </title>
+</head>
+
+<body>
+  <!-- step - 1 : onkeydown
+  step -2 : console the event.key
+  step -3 : check if the key is "Enter
+  -->
+  
+  <h2>PRACTICE 3 // for enter key </h2>
+  <input type="text" placeholder="Enter name to verify" class="js-verify"
+  onkeydown="
+  console.log(event.key);// This is j-script build-in object which gives information what key is pressed
+  if(event.key === 'Enter'){
+    Practice3();
+  }
+  ">
+  <button onclick="Practice3()">verify</button>
+  <p class="js-para2"></p>
+
+  <script>
+    
+    function Practice3() {  // and button3 does'nt need to convert to j-script
+      let paraElem2 = document.querySelector('.js-para2');
+      const verifyElem = document.querySelector('.js-verify').value; // input element does'nt need .innerHTML
+      
+      if (verifyElem === 'Roshan') {
+        paraElem2.innerHTML = 'Person verified!';
+      }
+      else {
+        paraElem2.innerHTML = 'Invalid Username!';
+
+      }
+    }
+    
+  </script>
+</body>
+
+</html>
