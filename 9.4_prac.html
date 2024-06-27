@@ -15,6 +15,9 @@
   <button class="js-button2" onclick="
     secondbutton();
   ">9b</button>
+  <h2>PRACTICE 3</h2>
+  <input type="text" placeholder="Enter name to verify" class="js-verify"> <button onclick="Practice3()">verify</button>
+  <p class="js-para2"></p>
 
   <script>
     console.log(document.title);
@@ -29,7 +32,7 @@
         buttonElement.innerHTML = '9a';
       }
       if (paraElem.innerHTML === 'Changed!') {
-        paraElem.innerHTML = 'Unhanged!';
+        paraElem.innerHTML = 'Unchanged!';
       }
       else {
         paraElem.innerHTML = 'Changed!';
@@ -37,11 +40,11 @@
       console.log(document.title);
       document.title = ('Practicing DOM');
 
-      
+
     }
     //console.log(document.body.innerHTML=('<button>9a</button>'));
     // document.body.innerHTML=('<button>9b</button>');
-    function secondbutton(){
+    function secondbutton() {
       const buttonElement2 = document.querySelector('.js-button2');
       if (buttonElement2.innerHTML === '9b') {
         buttonElement2.innerHTML = '9b Done';
@@ -50,8 +53,17 @@
         buttonElement2.innerHTML = '9b';
       }
     }
+    function Practice3() {  // and button3 does'nt need to convert to j-script
+      let paraElem2 = document.querySelector('.js-para2');
+      const verifyElem = document.querySelector('.js-verify').value; // input element does'nt need .innerHTML
+      if (verifyElem === 'Roshan') {
+        paraElem2.innerHTML = 'Person verified!';
+      }
+      else {
+        paraElem2.innerHTML = 'Invalid Username!';
 
-    
+      }
+    }
   </script>
 </body>
 
