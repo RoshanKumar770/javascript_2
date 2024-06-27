@@ -11,13 +11,28 @@
       changing();
       ">9a</button>
   <p class="js-para"> Original</p>
+
+
   <h2>PRACTICE 2</h2>
   <button class="js-button2" onclick="
     secondbutton();
   ">9b</button>
+
+
   <h2>PRACTICE 3</h2>
-  <input type="text" placeholder="Enter name to verify" class="js-verify"> <button onclick="Practice3()">verify</button>
+  <input type="text" placeholder="Enter name to verify" class="js-verify">
+  <button onclick="Practice3()">verify</button>
   <p class="js-para2"></p>
+
+
+  <h2>PRACTICE 4</h2>
+  <p>Amazon Cost Calculator</p>
+  <input type="text" placeholder="Enter the cost" class="js-cost-input">
+  <button onclick="
+  Practice4();
+  ">calculate</button>
+  <p class="js-total-cost"></p>
+
 
   <script>
     console.log(document.title);
@@ -64,6 +79,18 @@
 
       }
     }
+    function Practice4() {
+      const costInput = document.querySelector('.js-cost-input');
+      let cost = Number(costInput.value);                // this is how we get value inside text-box
+      // whenever we get value manually we need to convert to numbers
+      if (cost <=40) {
+        cost += 10;
+      }
+
+      document.querySelector('.js-total-cost')
+        .innerHTML = `Total cost calculated $${cost}`;
+    }
+
   </script>
 </body>
 
