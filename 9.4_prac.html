@@ -6,10 +6,16 @@
 </head>
 
 <body>
+  <h2>PRACTICE 1</h2>
   <button class="js-button" onclick="
       changing();
       ">9a</button>
-  <p  class="js-para"> Original</p>
+  <p class="js-para"> Original</p>
+  <h2>PRACTICE 2</h2>
+  <button class="js-button2" onclick="
+    secondbutton();
+  ">9b</button>
+
   <script>
     console.log(document.title);
 
@@ -30,10 +36,21 @@
       }
       console.log(document.title);
       document.title = ('Practicing DOM');
+
+      
     }
     //console.log(document.body.innerHTML=('<button>9a</button>'));
+    // document.body.innerHTML=('<button>9b</button>');
+    function secondbutton(){
+      const buttonElement2 = document.querySelector('.js-button2');
+      if (buttonElement2.innerHTML === '9b') {
+        buttonElement2.innerHTML = '9b Done';
+      }
+      else {
+        buttonElement2.innerHTML = '9b';
+      }
+    }
 
-    
   </script>
 </body>
 
