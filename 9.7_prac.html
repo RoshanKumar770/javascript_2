@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Name display</title>
+</head>
+
+<body>
+  <input class="js-input" type="text" placeholder="Name"> <button onclick="
+      button()">
+    Submit</button>
+  <p class="js-output"></p>
+  <script>
+    function button() {
+      const inputElem = document.querySelector('.js-input');
+      document.querySelector('.js-output')
+        .innerHTML = `Your name is: ${inputElem.value}`;
+    }
+  </script>
+</body>
+
+</html>
