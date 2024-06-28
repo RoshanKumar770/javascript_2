@@ -6,8 +6,15 @@
 </head>
 
 <body>
-  <input class="js-input" type="text" placeholder="Name"> <button onclick="
-      button()">
+  <input onkeydown="
+  event.key;
+  if(event.key === 'Enter'){
+   button();
+  }
+  "
+  class="js-input" type="text" placeholder="Name"> <button onclick="
+    button();
+    ">
     Submit</button>
   <p class="js-output"></p>
   <script>
