@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>click & display</title>
+    <title>Click & Display</title>
   </head>
   <body>
-    <input type="text" placeholder="Type something" class="
+    <input onkeyup="
+    newfeature();
+      " type="text" placeholder="Type  something" class="
     js-text
     ">
     <p class="js-output"></p>
     <script>
-     const input 
+      function newfeature(){
+        const inputElement=document.querySelector('.js-text');
+     document.querySelector('.js-output')
+     .innerHTML=`${inputElement.value}`;
+      }
+     
     </script>
   </body>
 </html>
