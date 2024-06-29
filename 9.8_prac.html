@@ -15,7 +15,7 @@
   <p class="js-output"></p>
   <script>
     function calc() {
-      let InputElement = document.querySelector('.js-input');
+      const InputElement = document.querySelector('.js-input');
       let cost = Number(InputElement.value);
       if (cost < 40) {
         cost = cost + 10;
