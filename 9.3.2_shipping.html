@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>AMAZON SHIPPING CALCULATOR</title>
+  <style>
+    .inputbox{
+      font-size:13px;
+      padding:10px;
+      border-style: solid;
+      border-color: rgb(205, 203, 203);
+      border-width:1.5px;
+    }
+    .button{
+      background-color: rgb(3, 152, 3);
+      color: white;
+      padding:12px;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <p>Amazon Shipping calculator</p>
+  <input class="js-cost-input inputbox" type="text" placeholder="Cost of order" onkeydown="
+  // clicks and keydowns are known as events.
+  // and onclick= click  and onkeydown = key press  are known as event listerner.
+  //onscroll=scrolling ,onmouseenter= hovering over,onmouseleave= stop hovering over
+  handleCostkeydown(event);// and to save something inside the function used event in parameter 
+  ">
+  <button class="button" onclick="calculateTotal()">Calculate</button>
+  <p class="js-total-cost"></p>
+
+  <script>
+
+    String(25)
+    console.log('25' - 5);// automatic type  TYPE COERCION
+    console.log('25' + 5); // both works as string in adding so we use Number
+
+    // Window object- window. is a build-in object that represent the broswer 
+    // window.document
+    // window.console.log('window');
+    // window.alert()
+
+
+    function handleCostkeydown(event) {
+      if (event.key === 'Enter') {// event object is not exixt in the function so used parameter put in function
+        calculateTotal();
+      }
+    }
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-cost-input');
+      // TYPE COERCION - error
+      // let cost =inputElement.value;
+      // console.log(cost);
+      // let cost = parseFloat(inputElement.value);
+      //let cost = inputElement.value * 1; // Implicitly convert input to a number
+      //console.log(typeof cost);  string 
+      let cost = Number(inputElement.value);
+
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector('.js-total-cost').innerHTML = `Total cost : $${cost}`; //cost.toFixed(2) can be used for 2 decimal place
+    }
+
+  </script>
+</body>
+
+</html>
