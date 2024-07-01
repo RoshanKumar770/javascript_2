@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Toggle-jscript</title>
-    <style>
-      .toggle-button{
-        background-color: rgb(214, 213, 213);
-        color: black;
-        padding: 8px 15px;
-        font-size: 14px;
-        border:none;
-        border-radius: 8px;
-        cursor:pointer;
-      }
-      .is-toggled{
-        background-color: black;
-        color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <button class="toggle-button js-button" onclick="
+
+<head>
+  <title>Toggle-jscript</title>
+  <style>
+    .toggle-button {
+      background-color: rgb(214, 213, 213);
+      color: black;
+      padding: 8px 15px;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .is-toggled {
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-button js-button" onclick="
       const button=document.querySelector('.js-button');
       if(!button.classList.contains('is-toggled')){
         button.classList.add('is-toggled');
@@ -28,5 +31,6 @@
           button.classList.remove('is-toggled');
         }
       ">Gaming</button>
-  </body>
+</body>
+
 </html>
