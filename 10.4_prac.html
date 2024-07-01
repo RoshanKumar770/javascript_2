@@ -18,31 +18,76 @@
       background-color: black;
       color: white;
     }
+
+    .toggle-button2 {
+      background-color: rgb(208, 206, 206);
+      color: black;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 8px 15px;
+    }
+
+    .istoggle2 {
+      background-color: black;
+      color: white;
+    }
+
+    .toggle-button3 {
+      background-color: rgb(208, 206, 206);
+      color: black;
+      font-size: 14px;
+      border: none;
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 8px 15px;
+    }
+
+    .istoggle3 {
+      background-color: black;
+      color: white;
+    }
   </style>
 </head>
 
 <body>
-  <button class="toggle-button js-button" onclick="
-     button_toggle();
-    ">Gaming</button>
-  <button class="toggle-button js-button" onclick="
-  button_toggle();
- ">Music</button>
-  <button class="toggle-button js-button" onclick="
-    button_toggle();
- ">Tech</button>
-  <script>
-    function button_toggle() {
-      const button = document.querySelector('.js-button');
-      if (!button.classList.contains('istoggle')) {
-        button.classList.add('istoggle');
-      }
-      else {
-        button.classList.remove('istoggle');
-      }
+  <button class="toggle-button js-button " onclick="
+     button = document.querySelector('.js-button');
+    if(!button.classList.contains('istoggle')){
+      button.classList.add('istoggle');
     }
-
-  </script>
+    else{
+      button.classList.remove('istoggle');
+    }
+    ">Gaming</button>
+  <button class="toggle-button2 js-button2 " onclick="
+  button = document.querySelector('.js-button2');
+   if(!button.classList.contains('istoggle2')){
+     button.classList.add('istoggle2');
+   }
+   else{
+     button.classList.remove('istoggle2');
+   }
+ ">Music</button>
+  <button class="toggle-button3 js-button3 " onclick="
+     button = document.querySelector('.js-button3');
+   if(!button.classList.contains('istoggle3')){
+     button.classList.add('istoggle3');
+   }
+   else{
+     button.classList.remove('istoggle3');
+   }
+ ">Tech</button>
+  <!-- <script>
+    const button = document.querySelector('.js-button');
+    if(!button.classList('istoggle')){
+      button.classList.add('istoggle');
+    }
+    else{
+      button.classList.remove('istoggle');
+    }
+  </script> -->
 </body>
 
 </html>
