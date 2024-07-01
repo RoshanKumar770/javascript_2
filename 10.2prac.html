@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>checking classList</title>
+</head>
+
+<body>
+  <button class="js-button" onclick="
+    button();
+    ">Test</button>
+  <script>
+    function button() {
+      const buttons = document.querySelector('.js-button');
+      console.log(buttons.classList.contains('js-button'));
+    }
+
+  </script>
+</body>
+
+</html>
