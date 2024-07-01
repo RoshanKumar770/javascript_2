@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>More jscript button</title>
+  <style>
+    .toggle-button{
+      background-color: rgb(208, 206, 206);
+      color:black;
+      font-size: 14px;
+      border:none;
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 8px 15px;
+    }
+    .istoggle{
+      background-color: black;
+      color:white;
+    }
+    .toggle-button2{
+      background-color: rgb(208, 206, 206);
+      color:black;
+      font-size: 14px;
+      border:none;
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 8px 15px;
+    }
+    .istoggle2{
+      background-color: black;
+      color:white;
+    }
+    .toggle-button3{
+      background-color: rgb(208, 206, 206);
+      color:black;
+      font-size: 14px;
+      border:none;
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 8px 15px;
+    }
+    .istoggle3{
+      background-color: black;
+      color:white;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="toggle-button js-button " onclick="
+     button = document.querySelector('.js-button');
+    if(!button.classList.contains('istoggle')){
+      button.classList.add('istoggle');
+    }
+    else{
+      button.classList.remove('istoggle');
+    }
+    ">Gaming</button>
+  
+  <!-- <script>
+    const button = document.querySelector('.js-button');
+    if(!button.classList('istoggle')){
+      button.classList.add('istoggle');
+    }
+    else{
+      button.classList.remove('istoggle');
+    }
+  </script> -->
+</body>
+
+</html>
