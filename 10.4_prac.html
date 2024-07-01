@@ -56,7 +56,16 @@
       button.classList.remove('istoggle');
     }
     ">Gaming</button>
-  
+  <button class="toggle-button2 js-button2 " onclick="
+  button = document.querySelector('.js-button2');
+   if(!button.classList.contains('istoggle2')){
+     button.classList.add('istoggle2');
+   }
+   else{
+     button.classList.remove('istoggle2');
+   }
+ ">Music</button>
+ 
   <!-- <script>
     const button = document.querySelector('.js-button');
     if(!button.classList('istoggle')){
