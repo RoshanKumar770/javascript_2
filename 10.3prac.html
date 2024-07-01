@@ -3,33 +3,30 @@
   <head>
     <title>Toggle-jscript</title>
     <style>
-      .is-toggled{
+      .toggle-button{
         background-color: rgb(214, 213, 213);
         color: black;
         padding: 8px 15px;
         font-size: 14px;
         border:none;
         border-radius: 8px;
+        cursor:pointer;
       }
-      .is-toggled:active{
+      .is-toggled{
         background-color: black;
         color: white;
-        cursor:pointer;
       }
     </style>
   </head>
   <body>
-    <button class="is-toggled" onclick="
-      button();
+    <button class="toggle-button js-button" onclick="
+      const button=document.querySelector('.js-button');
+      if(!button.classList.contains('is-toggled')){
+        button.classList.add('is-toggled');
+      }
+      else{
+          button.classList.remove('is-toggled');
+        }
       ">Gaming</button>
-    <script>
-      function button(){
-        const gElem=document.querySelector('.is-toggled');
-      if(classList.contains('is-toggled')){
-         button();
-      }
-      }
-      
-    </script>
   </body>
 </html>
